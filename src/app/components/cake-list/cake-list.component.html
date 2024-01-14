@@ -1,0 +1,14 @@
+<div class="container">
+  <ul class="list-group">
+    <li *ngFor="let cake of cakeList.photos">
+      <figure>
+        <a  [routerLink]="['/cake', cake.id]">
+          <img src="{{cake.src?.medium}}" alt="{{cake.alt}}">
+        </a>
+        <figcaption>
+          {{cake.alt}} - {{cake.photographer}}
+        </figcaption>
+      </figure>
+    </li>
+  </ul>
+</div>

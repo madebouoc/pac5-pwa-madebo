@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <div *ngIf="cake" class="row animate__animated animate__bounce animate__fadeIn">
+    <div class="col-md-9">
+      <p><strong>Identifier:</strong> {{ cake.id }}</p>
+      <p><strong>Author:</strong> {{ cake.photographer }}</p>
+      <p><strong>Size:</strong> {{ cake.width }} x {{ cake.height }}</p>
+      <p><strong>Url:</strong> {{ cake.url }}</p>
+      <img style="width: 80%; height: 80%;" class="rounded" src="{{ cake.src?.original }}" alt="">
+    </div>
+    <div class="col-md-3">
+      <a class="btn btn-danger" routerLink="/">Back</a>
+    </div>
+  </div>
+</div>
