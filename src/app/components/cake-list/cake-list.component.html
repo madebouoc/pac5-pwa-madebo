@@ -1,3 +1,4 @@
+<!--
 <div class="container">
   <ul class="list-group">
     <li *ngFor="let cake of cakeList.photos">
@@ -11,4 +12,16 @@
       </figure>
     </li>
   </ul>
+</div>
+-->
+<mat-button-toggle-group #group="matButtonToggleGroup" (change)="toggleView(group.value)" aria-label="Vista">
+  <mat-button-toggle value="cards">Cards</mat-button-toggle>
+  <mat-button-toggle value="table">Tabla</mat-button-toggle>
+</mat-button-toggle-group>
+
+<div class="container" *ngIf="currentView === 'cards'">
+  <app-base-card [myCakes]="cakeListArray"></app-base-card>
+</div>
+<div class="container" *ngIf="currentView === 'table'">
+  <app-base-grid [myCakes]="cakeListArray" ></app-base-grid>
 </div>

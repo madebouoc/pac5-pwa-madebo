@@ -1,0 +1,8 @@
+<mat-card *ngFor="let cake of myCakes">
+  <a [routerLink]="['/cake', cake.id]">
+    <img mat-card-image src="{{cake.src?.medium}}" alt="{{cake.alt}}">
+  </a>
+  <mat-card-content>
+    <p>{{cake.alt}} - {{cake.photographer}}</p>
+  </mat-card-content>
+</mat-card>

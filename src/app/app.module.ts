@@ -8,12 +8,22 @@ import { CakeDetailComponent } from './components/cake-detail/cake-detail.compon
 import {HttpClientModule} from "@angular/common/http";
 import {NgOptimizedImage} from "@angular/common";
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from "@angular/material/card";
+import {MatTableModule} from "@angular/material/table";
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import {MatIconModule} from "@angular/material/icon";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import { BaseCardComponent } from './shared/base-card/base-card.component';
+import { BaseGridComponent } from './shared/base-grid/base-grid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CakeListComponent,
-    CakeDetailComponent
+    CakeDetailComponent,
+    BaseCardComponent,
+    BaseGridComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +35,13 @@ import { ServiceWorkerModule } from '@angular/service-worker';
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    })
+    }),
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatTableModule,
+    MatButtonToggleModule,
+    MatIconModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
