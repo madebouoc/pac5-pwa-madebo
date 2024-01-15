@@ -10,6 +10,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class CakeDetailComponent implements OnInit {
   cake: Cake | undefined;
+  panelOpenState = false;
 
   constructor(private imagesService: CakeService,
               private activatedRoute: ActivatedRoute,

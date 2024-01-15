@@ -15,8 +15,8 @@
 </div>
 -->
 <mat-button-toggle-group #group="matButtonToggleGroup" (change)="toggleView(group.value)" aria-label="Vista">
-  <mat-button-toggle value="cards">Cards</mat-button-toggle>
-  <mat-button-toggle value="table">Tabla</mat-button-toggle>
+  <mat-button-toggle value="cards"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="filter"></mat-icon></mat-button-toggle>
+  <mat-button-toggle value="table"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="table_chart"></mat-icon></mat-button-toggle>
 </mat-button-toggle-group>
 
 <div class="container" *ngIf="currentView === 'cards'">

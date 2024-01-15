@@ -46,7 +46,7 @@ export class CakeService {
           query: 'cakes',
           orientation: 'square',
           page: page,
-          per_page: 10
+          per_page: 42
         }
       }
     );

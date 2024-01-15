@@ -1,14 +1,53 @@
-<div class="container mt-5">
-  <div *ngIf="cake" class="row animate__animated animate__bounce animate__fadeIn">
-    <div class="col-md-9">
-      <p><strong>Identifier:</strong> {{ cake.id }}</p>
-      <p><strong>Author:</strong> {{ cake.photographer }}</p>
-      <p><strong>Size:</strong> {{ cake.width }} x {{ cake.height }}</p>
-      <p><strong>Url:</strong> {{ cake.url }}</p>
-      <img style="width: 80%; height: 80%;" class="rounded" src="{{ cake.src?.original }}" alt="">
-    </div>
-    <div class="col-md-3">
-      <a class="btn btn-danger" routerLink="/">Back</a>
-    </div>
-  </div>
+<div *ngIf="cake" class="cakeDetailContainer">
+
+      <img class="rounded" src="{{ cake.src?.original }}" alt="">
+
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{cake.photographer}}
+            </mat-panel-title>
+            <mat-panel-description>
+              {{cake.alt}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <mat-panel-title>
+            resolution
+          </mat-panel-title>
+          <mat-panel-description>
+            {{cake.width}} x {{cake.height}}
+          </mat-panel-description>
+
+          <mat-panel-title>
+            Photographer
+          </mat-panel-title>
+          <mat-panel-description>
+            {{cake.photographer_id}} - <a href="{{cake.photographer_url}}">{{cake.photographer_url}}</a>
+          </mat-panel-description>
+
+          <mat-panel-title>
+            Original image
+          </mat-panel-title>
+          <mat-panel-description>
+            <a href="{{cake.src?.original}}">{{cake.src?.original}}</a>
+          </mat-panel-description>
+
+        </mat-expansion-panel>
+      </mat-accordion>
+<div class="button">
+  <button mat-stroked-button color="primary" routerLink="/">Back to list</button>
 </div>
+
+
+</div>
+
+
+
+
+
+
+
+

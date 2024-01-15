@@ -1,0 +1,27 @@
+
+app-base-card{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+
+app-base-grid {
+  padding: 20px 20px;
+  width: 90%;
+  margin: 20px 20px;
+}
+
+
+.mat-button-toggle-group.mat-button-toggle-group {
+  display: flex;
+  width: 100px;
+  margin: 20px auto;
+
+  .mat-button-toggle:nth-child(2) {
+    margin-left: auto;
+  }
+
+}
