@@ -10,4 +10,6 @@ export class BaseCardComponent {
 
   @Input() myCakes: Cake[] = [];
 
+
+
 }

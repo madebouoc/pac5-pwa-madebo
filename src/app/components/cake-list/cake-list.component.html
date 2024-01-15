@@ -1,19 +1,3 @@
-<!--
-<div class="container">
-  <ul class="list-group">
-    <li *ngFor="let cake of cakeList.photos">
-      <figure>
-        <a  [routerLink]="['/cake', cake.id]">
-          <img src="{{cake.src?.medium}}" alt="{{cake.alt}}">
-        </a>
-        <figcaption>
-          {{cake.alt}} - {{cake.photographer}}
-        </figcaption>
-      </figure>
-    </li>
-  </ul>
-</div>
--->
 <mat-button-toggle-group #group="matButtonToggleGroup" (change)="toggleView(group.value)" aria-label="Vista">
   <mat-button-toggle value="cards"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="filter"></mat-icon></mat-button-toggle>
   <mat-button-toggle value="table"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="table_chart"></mat-icon></mat-button-toggle>

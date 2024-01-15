@@ -1,0 +1,43 @@
+Marc Delgado Bonet (madebo@uoc.edu) - Resolución de la PAC5
+-----------------------------------------------------------
+
+He usado la API de Pexels, tematizado con imágenes de pasteles para no ser tan genérico.
+
+Pexels requiere token y dispone de una librería NodeJS para implementar el cliente. No obstante, he usado el método GET como en el ejemplo, para poder implementar objetos propios y no de terceros.
+
+
+PWA
+He desplegado la aplicación en Netlify, usando un repo de Github.
+Repo: https://github.com/madebouoc/pac5-pwa-madebo
+URL:  https://pac5-pwa-madebo.netlify.app/
+
+Parece que funciona correctamente: modo offline, instalar en W11, instalar en Android...
+
+He dejado en ngsw-config.json una configuración parecida a la del ejemplo pero permitiendo cargar 1000 páginas.
+
+En este caso estoy viendo que la memoria local ocupada aumenta muy rápido, debido al tamaño de las imágenes.
+
+
+Despliegue
+----------
+No he tenido ninguna dificultad en desplegar, excepto que Netlify fallaba cuando intentaba añadir el parámetro "outputHashing".
+
+
+Página de lista
+---------------
+He dejado los botones en el medio, con el framework y Angular Material me está costando afinar la maquetación.
+
+
+Página de detalle
+-----------------
+He implementado un acordeon que al expandir, muestra detalles sobre la imagen.
+
+
+Spinner
+-------
+Está implementado y aparece momentaneamente si se simula conexión 3G. He implementado el ejemplo de la PAC3 con interceptor HTTP, aunque mi intención era un spinner por imagen y detectar cuando la imagen ha terminado de descargarse.
+
+
+
+Saludos.
+Marc Delgado

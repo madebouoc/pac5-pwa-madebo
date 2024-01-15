@@ -19,14 +19,6 @@ export class CakeListComponent  implements OnInit{
 
   constructor(private cakeService: CakeService) {  }
 
-  /*
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event: Event): void {
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-      this.addToList();
-    }
-  }
-   */
 
   ngOnInit(): void {
     this.cakeService.getCakeList(this.page)
@@ -37,18 +29,7 @@ export class CakeListComponent  implements OnInit{
     //.subscribe( (cakes) => console.log(cakes));
   }
 
-/*
-  addToList(): void {
-    this.page++;
-    this.cakeService.nextPage(this.page)
-      .subscribe(((cakes) => {
-        if (this.cakeList && cakes.photos) {
-          // @ts-ignore
-          this.cakeList.photos = [...this.cakeList.photos, ...cakes.photos];
-        }
-      }));
-  }
- */
+
 
   toggleView(view: string) {
     this.currentView = view;
